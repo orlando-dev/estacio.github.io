@@ -6,76 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
 </head>
+
 <body>
+    <div>
+        <h1>Cadastro</h1>
+        <p>Complete com suas Informações</p>
+        <br>
+    </div>
+
     <form>
         <fieldset>
-            <legend>Informações básicas do usuário</legend>
-            <label for="name">Nome do usuário:</label>
-            <input id="name" name="name" type="text">
-            <label for="birthdate">Data de nascimento: </label>
-            <input type="date" name="birthdate" id="birthdate">
-            <label for="age">Idade: </label>
-            <input type="number" name="age" id="age">
-            <br>
-            <label for="email">E-mail: </label>
-            <input type="email" name="email" id="email">
-            <label for="phone">Celular</label>
-            <input type="tel" name="phone" id="phone">
-            <br>
-        </fieldset>
-        <fieldset>
-            <legend>Gênero</legend>
+            <legend>Informações básicas do Gamer</legend>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="nickname">Nickname</label>
+                <input type="text" name="nickname" id="nickname" required>
+            </div>
+
             <label for="gender2">Masculino</label>
-            <input type="radio" name="gender2" id="gender2" value="Male">
+            <input type="radio" name="gender2" id="gender2" value="Male" required>
             <label for="gender2">Feminino</label>
-            <input type="radio" name="gender2" id="gender2" value="Female">
+            <input type="radio" name="gender2" id="gender2" value="Female" required>
         </fieldset>
+        
+
+        
         <fieldset>
-            <legend>Opções adicionais</legend>
-            <label for="tshirt-color">Cor da camisa: </label>
-            <input type="color" name="tshirt-color" id="tshirt-color">
+            <legend>Preferências do Gamer</legend>
+            <div>
+                <label>Qual gênero de game você mais gosta?</label>
+                <label>
+                    <input type="radio" name="generos" value="acao" required>Ação
+                </label>
+    
+                <label>
+                    <input type="radio" name="generos" value="rpg">RPG
+                </label>
+                
+                <label>
+                    <input type="radio" name="generos" value="corrida">Corrida
+                </label>
+    
+                <label>
+                    <input type="radio" name="generos" value="estrategia">Estratégia
+                </label>
+    
+                <label> 
+                    <input type="radio" name="generos" value="fps">FPS
+                </label>
+    
+                <label> 
+                    <input type="radio" name="generos" value="sobrevivencia">Sobrevivência
+                </label>
+            </div>
+    
+            <div>
+                <label for="plataforma">Plataforma</label>
+                <select id="plataforma" required>
+                    <option selected disabled value="">Selecione...</option>
+                    <option>PC</option>
+                    <option>XBOX SERIES S|X</option>
+                    <option>PS5</option>
+                    <option>Nitendo Switch</option>
+                </select>
+            </div>
+            <div>
+                <label>Seleciona os jogos que você já jogou:</label><br><br>
+                
+                <input type="checkbox" id="thewitcher3" name="thewitcher3" value="TheWitcher3" required>
+                <label for="thewitcher3">The Witcher 3: Wild Hunt</label>
+
+                <input type="checkbox" id="needforspeed" name="needforspeed" value="NeedForSpeed">
+                <label for="needforspeed">Need for Speed: Underground 2</label>
+
+                <input type="checkbox" id="callofduty" name="callofduty" value="CallofDutyModernWarfare2">
+                <label for="callofduty">Call of Duty Modern Warfare 2</label>
+
+                <input type="checkbox" id="mortalkombat" name="mortalkombat" value="MortalKombat11">
+                <label for="mortalkombat">Mortal Kombat 11</label>
+
+                <input type="checkbox" id="mariokart8deluxe" name="mariokart8deluxe" value="MarioKart8Deluxe">
+                <label for="mariokart8deluxe">Mario Kart 8 Deluxe</label>
+            </div>
         </fieldset>
-        <fieldset>
-            <legend>Horários</legend>
-            <label for="schedule">Horario de agendamento: </label>
-            <input type="datetime-local" name="schedule" id="schedule">
+
+        <div>
+            <label>Conte um pouco da sua experiências com jogos(Opcional)</label>
             <br>
-            <label for="month">Mês: </label>
-            <input type="month" name="month" id="month">
-        </fieldset>
-        <fieldset>
-            <legend>Foto</legend>
-            <label for="photo">Foto: </label>
-            <input type="file" name="photo" id="photo">
-        </fieldset>
-        <fieldset>
-            <legend>Range</legend>
-            <label for="lickert">Lickert</label>
-            <input type="range" name="lickert" id="lickert">
-        </fieldset>
-        <fieldset>
-            <legend>Senha</legend>
-            <label for="password">Digite sua senha: </label>
-            <input type="password" name="password" id="password">
-        </fieldset>
+            <textarea row="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
 
-        <fieldset>
-            <legend>Área de texto livre</legend>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-        </fieldset>
-
-        <fieldset>
-            <legend>Opções</legend>
-            <select name="options" id="options">
-                <option value="option1">Opção 1</option>
-                <option value="option2">Opção 2</option>
-                <option value="option3">Opção 3</option>
-                <option value="option4">Opção 4</option>
-            </select>
-        </fieldset>
-
+        <button type="submit" id="concluido">Concluído</button>
         <input type="reset" value="Limpar">
-
-    </form>
+        
 </body>
 </html>
